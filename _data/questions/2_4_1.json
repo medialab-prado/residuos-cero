@@ -1,0 +1,8 @@
+{
+  "question":"¿Qué consumes de tentempié?",
+  "type":"group",
+  "groups":[
+    ["Fruta", "snack casero", "snack de máquina"],
+    ["Café vaso desechable/taza" , "Café molido/cápsula", "Té vaso", "Té desechable/taza" , "Té bolsa/granel"]
+  ]
+}

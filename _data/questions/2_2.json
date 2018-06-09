@@ -1,0 +1,5 @@
+{
+  "question":"ahora que ya estás listo para empezar el día, ¿como son tus desayunos?",
+  "type":"radio",
+  "values":["En casa","En un bar","De camino a la oficina (para llevar)"]
+}

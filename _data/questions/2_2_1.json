@@ -1,0 +1,9 @@
+{
+  "question":"En casa",
+  "type":"group",
+  "groups":[
+    ["Cereales granel","Cereales envasado", "yogurt", "fruta", "pan", "mermelada o miel o nocilla"],
+    ["mantequilla", "aceite "],
+    ["Café molido", "Café capsulas", "té granel", "té granel bolsitas"]
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "question":"A media tarde,¿tomas una merienda?",
+  "type":"radio",
+  "values":["Si","No"]
+}

@@ -1,0 +1,5 @@
+{
+  "question":"¿Dónde sueles ir?",
+  "type":"radio",
+  "values":["Supermercado","Tienda de barrio","Mercado tradicional"]
+}

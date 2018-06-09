@@ -1,0 +1,5 @@
+{
+  "question":"En casa, ¿qué tipo de agua consumes?",
+  "type":"radio",
+  "values":["Del grifo","Embotellada","Fuente de agua"]
+}

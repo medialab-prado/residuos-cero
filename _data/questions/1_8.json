@@ -1,0 +1,5 @@
+{
+  "question":"¿Sueles comprar productos reutilizables?",
+  "type":"radio",
+  "values":["Siempre","A veces","Nunca"]
+}

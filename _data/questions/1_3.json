@@ -1,0 +1,6 @@
+{
+  "question":"¿Fumas?",
+  "type":"detail-radio",
+  "values":["Industriales","De liar"],
+  "empty_option":true
+}

@@ -1,0 +1,5 @@
+{
+  "question":"Llega la hora de comer y ¿qué sueles hacer?",
+  "type":"radio-number",
+  "values":["llevo mi tupper/como en casa","como fuera ","pido comida a domicilio "]
+}

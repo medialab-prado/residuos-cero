@@ -1,0 +1,13 @@
+{
+  "question":"Por la mañana cuando te levantas, en tu momento de aseo personal ¿qué productos sueles utilizar?",
+  "type":"group",
+  "groups":[
+    ["champú", "gel", "acondicionador"],
+    ["compresas", "tampones", "copa"],
+    ["papel higiénico", "toallitas"],
+    ["maquillaje", "cremas", "perfume", "crema"],
+    ["maquinilla de afeitar desechable" , "maquinilla de afeitar eléctrica", "maquinilla de afeitar acero"],
+    ["cepillo de dientes plástico" , "cepillo de dientes bambú" , "cepillo de dientes eléctrico"],
+    ["desodorante spray" , "desodorante roll on" , "desodorante piedra de alumbre"]
+   ]
+}
