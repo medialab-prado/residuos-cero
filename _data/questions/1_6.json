@@ -1,4 +1,6 @@
 {
+  "id":"1_6",
+  "section":"basic",
   "question":"¿Sueles reciclar?",
   "type":"radio",
   "values":["Siempre","A veces","Nunca"]

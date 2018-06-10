@@ -1,4 +1,6 @@
 {
+  "id":"1_3",
+  "section":"basic",
   "question":"¿Fumas?",
   "type":"detail-radio",
   "values":["Industriales","De liar"],

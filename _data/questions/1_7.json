@@ -1,4 +1,6 @@
 {
+  "id":"1_7",
+  "section":"basic",
   "question":"¿Sueles comprar a granel?",
   "type":"radio",
   "values":["Siempre","A veces","Nunca"]

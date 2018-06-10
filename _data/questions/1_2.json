@@ -1,4 +1,6 @@
 {
+  "id":"1_2",
+  "section":"basic",
   "question": "¿Cuántas veces a la semana vas a la compra?",
   "type": "number",
   "options": { "min": 1, "max": 5 }

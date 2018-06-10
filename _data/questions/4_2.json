@@ -1,4 +1,6 @@
 {
+  "id":"4_2",
+  "section":"afternoon",
   "question":"¿Dónde sueles ir?",
   "type":"radio",
   "values":["Supermercado","Tienda de barrio","Mercado tradicional"]
