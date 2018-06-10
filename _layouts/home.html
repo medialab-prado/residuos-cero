@@ -1,245 +1,54 @@
-<html lang="es">
+<html>
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <title>{% if page.title %}{{ page.title | capitalize }} | {% endif %}{{ site.title }}</title>
+  <title>{% if page.title %}{{ page.title | capitalize }} | {% endif %}{{ site.title }}</title>
   <link rel="stylesheet" href="node_modules/bootstrap/dist//css/bootstrap-reboot.min.css">
   <link rel="stylesheet" href="node_modules/bootstrap/dist//css/bootstrap.min.css">
-  <style>
-    .question {
-      height: 80%;
-      border: 1px solid;
-    }
-    .question-label{
-      margin: 1em;
-    }
-  </style>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-  <div class="container-fluid">
+  {% include header.html %}
+  <main id="main-container" role="main" class="container-fluid">
     <form>
-      <section id="general" class="container">
-        <h1>Información General</h1>
-        {% assign questions = site.data.questions | sort %}
-        {% for question_hash in questions %}
-          {% assign question_id = question_hash[0] %}
-          {% if question_id contains '1_' %}
-            {% assign question = question_hash[1] %}
-
-             <div class="question row justify-content-md-center align-items-center">
-               <div class='col-md-auto'>
-                 {% if question.icon %}
-                    <img src="{{question.icon}}" class="img-thumbnail mx-auto d-block" alt="{{question.question}}" />
-                 {%else%}
-                    <img data-src="holder.js/200x200" class="img-thumbnail mx-auto d-block" alt="{{question.question}}" />
-                 {%endif%}
-                 <label class="question-label">{{question.question}}</label>
-                 {% case question.type %}
-                  {% when 'radio' %}
-                    {% include radio.html %}
-                  {% when 'number' %}
-                    {% include number.html %}
-                  {% else %}
-                    {{question.type}}
-                 {% endcase %}
-               </div>
-             </div>
-          {% endif %}
-        {% endfor %}
-
-      </section>
-
-      <section id="morning" class="container">
-        <h1>Mañana</h1>
+      <section id="home" class="container main active" data-next='basic'>
         <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>por la mañana cuando te levantas, en tu momento de aseo personal ¿qué productos sueles utilizar?</label>
-            <ul class="list-unstyled">
-              <li><input type="checkbox" name="2_1[]">champú</li>
-              <li><input type="checkbox" name="2_1[]">acondicionador</li>
-              <li><input type="checkbox" name="2_1[]">gel</li>
-              <li><input type="checkbox" name="2_1[]">maquinilla de afeitar</li>
-              <li><input type="checkbox" name="2_1[]">cepillo de dientes</li>
-              <li><input type="checkbox" name="2_1[]">pasta de dientes</li>
-              <li><input type="checkbox" name="2_1[]">cremas</li>
-              <li><input type="checkbox" name="2_1[]">compresas</li>
-              <li><input type="checkbox" name="2_1[]">tampones</li>
-              <li><input type="checkbox" name="2_1[]">copa</li>
-              <li><input type="checkbox" name="2_1[]">papel higiénico</li>
-              <li><input type="checkbox" name="2_1[]">maquillaje</li>
-              <li><input type="checkbox" name="2_1[]">desodorante spray</li>
-              <li><input type="checkbox" name="2_1[]">desodorante roll on</li>
-            </ul>
-          </div>
-        </div>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>ahora que ya estás listo para empezar el día, ¿como son tus desayunos?</label>
-            <input type="radio" name="2_2" value="tap">en casa
-            <input type="radio" name="2_2" value="bottle">en un bar
-            <input type="radio" name="2_2" value="bottle">de camino a la oficina (para llevar)
-          </div>
-        </div>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>En casa</label>
-            <ul class="list-unstyled">
-              <li><input type="checkbox" name="2_2_1[]">cerales</li>
-              <li><input type="checkbox" name="2_2_1[]">café</li>
-              <li><input type="checkbox" name="2_2_1[]">café de cápsulas</li>
-              <li><input type="checkbox" name="2_2_1[]">yogourt</li>
-              <li><input type="checkbox" name="2_2_1[]">fruta</li>
-              <li><input type="checkbox" name="2_2_1[]">pan de molde</li>
-              <li><input type="checkbox" name="2_2_1[]">mantequilla</li>
-              <li><input type="checkbox" name="2_2_1[]">mermelada</li>
-              <li><input type="checkbox" name="2_2_1[]">aceita</li>
-              <li><input type="checkbox" name="2_2_1[]">barra de pan</li>
-            </ul>
-          </div>
-        </div>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>En un bar</label>
-            <ul class="list-unstyled">
-              <li><input type="checkbox" name="2_2_2[]">cafe</li>
-              <li><input type="checkbox" name="2_2_2[]">azúcar de sobre</li>
-              <li><input type="checkbox" name="2_2_2[]">sacarina</li>
-              <li><input type="checkbox" name="2_2_2[]">cafe de capsulas</li>
-              <li><input type="checkbox" name="2_2_2[]">tostada</li>
-              <li><input type="checkbox" name="2_2_2[]">aceite</li>
-              <li><input type="checkbox" name="2_2_2[]">tomate</li>
-              <li><input type="checkbox" name="2_2_2[]">mantequilla</li>
-              <li><input type="checkbox" name="2_2_2[]">mermelada</li>
-              <li><input type="checkbox" name="2_2_2[]">bollería</li>
-              <li><input type="checkbox" name="2_2_2[]">pajitas</li>
-            </ul>
-          </div>
-        </div>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>Para llevar</label>
-            <ul class="list-unstyled">
-              <li><input type="checkbox" name="2_2_3[]">cafe</li>
-              <li><input type="checkbox" name="2_2_3[]">botella de agua</li>
-              <li><input type="checkbox" name="2_2_3[]">azúcar de sobre</li>
-              <li><input type="checkbox" name="2_2_3[]">sacarina</li>
-              <li><input type="checkbox" name="2_2_3[]">mezclador (cucharilla)</li>
-              <li><input type="checkbox" name="2_2_3[]">bollería</li>
-              <li><input type="checkbox" name="2_2_3[]">bolsa para transportarlo</li>
-            </ul>
-          </div>
-
-        </div>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>¿Durante el desayuno lees el periódico?</label>
-            <input type="radio" name="2_3">En papel
-            <input type="radio" name="2_3">En el móvil
-            <input type="radio" name="2_3">¿Periódico?, ¿qué es eso?
-          </div>
-
-        </div>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>En el trabajo, viene bien un tentempié de media mañana.</label>
-            <ul class="list-unstyled">
-              <li><input type="checkbox" name="2_4[]">Fruta</li>
-              <li><input type="checkbox" name="2_4[]">botella de agua</li>
-              <li><input type="checkbox" name="2_4[]">Cafe de máquina</li>
-              <li><input type="checkbox" name="2_4[]">Cafe de cafetera</li>
-              <li><input type="checkbox" name="2_4[]">té de máquina</li>
-              <li><input type="checkbox" name="2_4[]">Té</li>
-              <li><input type="checkbox" name="2_4[]">snack de máquina</li>
-            </ul>
+          <div class='col-md-10'>
+            <h1>{% if page.title %}{{ page.title | capitalize }} | {% endif %}{{ site.title }}</h1>
+            <p>En la ciudad de Madrid, cada habitante genera un kilo de basura por día.</p>
+            <p>¿Cuánto crees que gastas en comparación con la media?</p>
+            <p>
+              <a href="#" class="btn btn-secondary action" data-next='basic' name='1_1' value='more'>Más</a>
+              <a href="#" class="btn btn-secondary action" data-next='basic' name='1_1' value='less'>Menos</a>
+            </p>
+            <div class="col-md">
+              <p class="text-muted">Este proyecto no almacena ningún dato sobre los usuarios. Rellenar el cuestionario requiere aproximadamente cinco minutos. Los resultados deben considerarse una estimación.</p>
+              <p class="text-muted">Proyecto realizado en el Taller de Periodismo de Datos 2018 en Medialab-Prado.</p>
+            </div>
           </div>
         </div>
       </section>
-
-      <section id="midday" class="container">
-        <h1>Medio día</h1>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>Llega la hora de comer y ¿qué sueles hacer? </label>
-            <input type="radio" name="3_1">llevo mi tupper/como en casa <input type="number">
-            <input type="radio" name="3_1">como fuera <input type="number">
-            <input type="radio" name="3_1">pido comida a domicilio<input type="number">
-          </div>
-
-        </div>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>Si cocinas en casa, cómo almacenas los productos que no usaste completamente</label>
-            <input type="radio" name="3_1_1">en tupper
-            <input type="radio" name="3_1_1">envueltos en papel celofán
-            <input type="radio" name="3_1_1">envueltos en papel aluminio
-            <input type="radio" name="3_1_1">sin nada
-          </div>
-
-        </div>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>A media tarde</label>
-            <ul class="list-unstyled">
-              <li><input type="checkbox" name="3_2[]">Fruta</li>
-              <li><input type="checkbox" name="3_2[]">botella de agua</li>
-              <li><input type="checkbox" name="3_2[]">Cafe de máquina</li>
-              <li><input type="checkbox" name="3_2[]">Cafe de cafetera</li>
-              <li><input type="checkbox" name="3_2[]">té de máquina</li>
-              <li><input type="checkbox" name="3_2[]">Té</li>
-              <li><input type="checkbox" name="3_2[]">snack de máquina</li>
-            </ul>
-          </div>
-        </div>
+      <section id="basic" class="container" data-next='morning' data-prev='home'>
+        <h1>Información General</h1> {% assign questions = site.data.questions | where:"section","basic" | sort: 'id' %} {% for question in questions %} {% assign question_id = question.id %} {% include question.html %} {% endfor %}
       </section>
 
-      <section id="afternoon" class="container">
-        <h1>Tarde</h1>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>De vuelta a casa del trabajo es el momento de hacer la compra ¿qué tipo de productos sueles comprar?</label>
-            <ul class="list-unstyled">
-              <li><input type="checkbox" name="4_1[]">Productos a granel</li>
-              <li><input type="checkbox" name="4_1[]">Productos envasados</li>
-              <li><input type="checkbox" name="4_1[]">productos procesado</li>
-              <li><input type="checkbox" name="4_1[]">productos frescos</li>
-            </ul>
-          </div>
-
-        </div>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>¿Dónde sueles ir?</label>
-            <input type="radio" name="4_2">Supermercado
-            <input type="radio" name="4_2">Tienda de barrio
-            <input type="radio" name="4_2">mercado tradicional
-          </div>
-
-        </div>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>¿Sueles llevar tu propia bolsa o carro de la compra?</label>
-            <input type="radio" name="4_2">siempre
-            <input type="radio" name="4_2">a veces
-            <input type="radio" name="4_2">nunca
-          </div>
-        </div>
+      <section id="morning" class="container" data-next='midday' data-prev='basic'>
+        <h1>Mañana</h1> {% assign questions = site.data.questions | where:"section","morning" | sort: 'id' %} {% for question in questions %} {% assign question_id = question.id %} {% include question.html %} {% endfor %}
       </section>
 
-      <section id="night" class="container">
-        <h1>Noche</h1>
-        <div class="question row justify-content-md-center align-items-center">
-          <div class='col-md-auto'>
-            <label>Llegas a casa, te pones cómodo, eliges  tu serie favorita y…</label>
-            <ul class="list-unstyled">
-              <li><input type="checkbox" name="4_1[]">Te preparas la cena <input type="number"></li>
-              <li><input type="checkbox" name="4_1[]">pides comida a domicilio <input type="number"></li>
-              <li><input type="checkbox" name="4_1[]">cenas fuera <input type="number"></li>
-            </ul>
-          </div>
-        </div>
+      <section id="midday" class="container" data-next='afternoon' data-prev='morning'>
+        <h1>Medio día</h1> {% assign questions = site.data.questions | where:"section","midday" | sort: 'id' %} {% for question in questions %} {% assign question_id = question.id %} {% include question.html %} {% endfor %}
+      </section>
+
+      <section id="afternoon" class="container" data-next='night' data-prev='midday'>
+        <h1>Tarde</h1> {% assign questions = site.data.questions | where:"section","afternoon" | sort: 'id' %} {% for question in questions %} {% assign question_id = question.id %} {% include question.html %} {% endfor %}
+      </section>
+
+      <section id="night" class="container" data-next='finish' data-prev='afternoon'>
+        <h1>Noche</h1> {% assign questions = site.data.questions | where:"section","night" | sort: 'id' %} {% for question in questions %} {% assign question_id = question.id %} {% include question.html %} {% endfor %}
       </section>
       <section id="finish" class="container">
         <div class="question row justify-content-md-center align-items-center">
@@ -249,9 +58,12 @@
         </div>
       </section>
     </form>
-  </div>
-  <script rel="javascript" src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  </main>
+  {% include footer.html %}
+  <script rel="javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script rel="javascript" src="node_modules/popper.js/dist/umd/popper.min.js"></script>
   <script rel="javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script rel="javascript" src="/js/main.js"></script>
   <!-- Development -->
   <script rel="javascript" src="node_modules/holderjs/holder.min.js"></script>
 </body>

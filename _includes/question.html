@@ -1,0 +1,26 @@
+<div class="question row justify-content-md-center align-items-center">
+  <div class='col-md-auto'>
+    {% if question.icon %}
+       <img src="{{question.icon}}" class="img-thumbnail mx-auto d-block" alt="{{question.question}}" />
+    {%else%}
+       <img data-src="holder.js/200x200" class="img-thumbnail mx-auto d-block" alt="{{question.question}}" />
+    {%endif%}
+    <label class="question-label">{{question.question}}</label>
+    {% case question.type %}
+     {% when 'radio' %}
+       {% include radio.html %}
+     {% when 'number' %}
+       {% include number.html %}
+     {% when 'detail-radio' %}
+       {% include radio-detail.html %}
+     {% when 'group' %}
+       {% include group.html %}
+     {% when 'radio-number' %}
+       {% include radio-number.html %}
+     {% when 'slider-group' %}
+       {% include number-group.html %}
+     {% else %}
+       <b>{{question.type}}</b>
+    {% endcase %}
+  </div>
+</div>

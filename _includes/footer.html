@@ -1,0 +1,33 @@
+<nav class="navbar fixed-bottom navbar-expand-sm navbar-dark bg-dark">
+      <!--<a class="navbar-brand" href="#">Bottom navbar</a>-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="main collapse navbar-collapse" id="footbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Acerca del proyecto <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">¿Cómo reducir?</a>
+          </li>
+        </ul>
+      </div>
+      <div class="questionary">
+        <ul class="question-bar navbar-nav mr-auto">
+          {% assign sections = "Preguntas básicas, Mañana, Medio día, Tarde, Noche" | split: ", " %}
+          {% assign sections_ids = "basic, morning, midday, afternoon, night" | split: ", " %}
+        {% for section in sections %}
+          <li class="nav-item">
+            <a href="#" class="action-footer" data-target="#{{sections_ids[forloop.index0]}}">{{section|capitalize}}</a>
+            {% assign questions = site.data.questions | where:"section",sections_ids[forloop.index0] | sort: 'id' %}
+            <ul class="question_index">
+              {% for question in questions %}
+                <li id="{{question.id}}"><a href="#{{question_index}}">*</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    </nav>

@@ -1,0 +1,52 @@
+
+body>.container,
+body>.container-fluid {
+  padding: 60px 15px 0;
+}
+
+section{
+  display:none;
+}
+section.active{
+  display: block;
+}
+#basic{
+
+}
+#morning,.morning{
+  background: #F6D285;
+}
+#midday,.midday{
+  background: #FCE043;
+}
+#afternoon,.afternoon{
+  background: #537895;
+}
+#night,.night{
+  background: #09203F;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.question {
+  height: 90%;
+  text-align: center;
+  border: 1px solid;
+}
+
+.question-label {
+  margin: 1em;
+}
+.question_index{
+  display: inline;
+  padding-left: 0;
+}
+.question_index li{
+  list-style: none;
+  display: inline-block;
+}

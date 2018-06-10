@@ -1,0 +1,12 @@
+<div class="row justify-content-md-center">
+  {% for group in question.groups %}
+  <div class="question-group d-flex flex-column">
+  {%for value in group %}
+    <div class="form-group form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" name="{{question_id}}" value="{{value|downcase}}" id="{{question_id}}_{{value|downcase}}">
+      <label class="form-check-label" for="{{question_id}}_{{value|downcase}}">{{value}}</label>
+    </div>
+  {%endfor%}
+  </div>
+  {% endfor %}
+</div>

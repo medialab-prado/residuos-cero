@@ -1,0 +1,6 @@
+ {%for value in question.values %}
+<div class="d-flex flex-column">
+  {{value}}
+      <input class="form-control custom-range" type="range" name="{{question_id}}_quantity" id="{{question_id}}_quantity" min="{{question.options.min}}" max="{{question.options.max}}">
+</div>
+{%endfor%}
