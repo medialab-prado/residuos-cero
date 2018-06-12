@@ -18,16 +18,10 @@ El proyecto trata de proponer soluciones personalizadas al lector mediante el an
 Para conseguir esto, hemos pensado usar un formato de cuestionario online que permite al usuario medir su producción de residuos y recibir consejos personalizados para tomar medidas.
 
  
- 
 ## Detalles sobre el formato
 Para lograr nuestro objetivo de concientización, nos parece imprescindible crear una herramienta enfocada al usuario, simple de uso y divertida. Daremos mucha importancia a la manera de comunicar con los usuarios - enfoque positivo, datos concretos, diseño ameno y que engancha a primera vista.
 
 
-## Descripción del perfil de los colaboradores que requiere el proyecto
-- **Contenido**: análisis de datos, investigación, redacción, personas con conocimiento en la protección del medio ambiente, aficionados del movimiento Zero Waste, etc.
-- **Forma**: programadores, diseñadores, UX/UI, ilustradores, etc.
- 
- 
 ## Calendario de producción
 - 2-3 marzo: Recopilación de datos, ideas, referencias, etc.
 - marzo-abril: Análisis de los datos, sacar conclusiones, pensar en la estructura del proyecto
@@ -41,7 +35,7 @@ Para lograr nuestro objetivo de concientización, nos parece imprescindible crea
 ## Equipo
 - [Diego Ramírez Aragón](https://twitter.com/lowfill)
 - [Flora Fosset](https://twitter.com/florafosset)
-- [Noelia Romero] (https://twitter.com/cortocirtuit)
+- [Noelia Romero](https://twitter.com/cortocirtuit)
 - [Pau Valiente](https://twitter.com/paucc)
 
 
