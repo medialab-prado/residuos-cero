@@ -38,12 +38,10 @@ Para lograr nuestro objetivo de concientización, nos parece imprescindible crea
 - 22-24 junio: Detalles finales, preparación de la presentación
 
  
-## Colaboradores (provisional)
+## Equipo
 - [Diego Ramírez Aragón](https://twitter.com/lowfill)
 - [Flora Fosset](https://twitter.com/florafosset)
-- Jimena García
-- [Luis Jerez Rincón](https://www.linkedin.com/in/luisjerez/)
-- Noelia Romero
+- [Noelia Romero] (https://twitter.com/cortocirtuit)
 - [Pau Valiente](https://twitter.com/paucc)
 
 
