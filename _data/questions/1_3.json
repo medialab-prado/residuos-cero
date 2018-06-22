@@ -3,6 +3,9 @@
   "section":"basic",
   "question":"¿Fumas?",
   "type":"detail-radio",
-  "values":["Industriales","De liar"],
-  "empty_option":true
+  "values":[
+    {"name":"Industriales","value":2},
+    {"name":"Tabaco de liar","value":1},
+    {"name":"No fumo","value":0}
+  ]
 }

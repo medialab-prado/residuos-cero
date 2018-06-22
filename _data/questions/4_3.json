@@ -3,5 +3,9 @@
   "section":"afternoon",
   "question":"¿Sueles llevar tu propia bolsa o carro de la compra?",
   "type":"radio",
-  "values":["Siempre","A veces","Nunca"]
+  "values":[
+    {"name":"Siempre","value":0},
+    {"name":"A veces","value":1},
+    {"name":"Nunca","value":2}
+  ]
 }

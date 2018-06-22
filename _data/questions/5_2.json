@@ -3,5 +3,10 @@
   "section":"night",
   "question":"Si te sobra comida, como guardas alimentos",
   "type":"radio",
-  "values":["en tupper","envueltos en papel celofán","envueltos en papel aluminio","sin nada"]
+  "values":[
+    {"name":"en tupper","value":1},
+    {"name":"envueltos en papel celofán","value":3},
+    {"name":"envueltos en papel aluminio","value":2},
+    {"name":"sin nada","value":0}
+  ]
 }

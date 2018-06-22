@@ -1,7 +1,11 @@
 {
-  "id":"5_1",
-  "section":"night",
-  "question":"Llegas a casa, te pones cómodo, eliges  tu serie favorita y…",
-  "type":"slider-group",
-  "values":["Te preparas la cena","pides comida a domicilio","cenas fuera"]
+  "id": "5_1",
+  "section": "night",
+  "question": "Llegas a casa, te pones cómodo, eliges  tu serie favorita y…",
+  "type": "slider-group",
+  "values": [
+    { "name": "Te preparas la cena", "value": 0 },
+    { "name": "pides comida a domicilio", "value": 0 },
+    { "name": "cenas fuera", "value": 0 }
+  ]
 }

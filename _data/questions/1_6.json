@@ -3,5 +3,9 @@
   "section":"basic",
   "question":"¿Sueles reciclar?",
   "type":"radio",
-  "values":["Siempre","A veces","Nunca"]
+  "values":[
+    {"name":"Siempre","value":0},
+    {"name":"A veces","value":2},
+    {"name":"Nunca","value":3}
+  ]
 }

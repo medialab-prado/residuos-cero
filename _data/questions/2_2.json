@@ -3,5 +3,9 @@
   "section":"morning",
   "question":"ahora que ya estás listo para empezar el día, ¿como son tus desayunos?",
   "type":"radio",
-  "values":["En casa","En un bar","De camino a la oficina (para llevar)"]
+  "values":[
+    {"name":"En casa","value":0},
+    {"name":"En un bar","value":1},
+    {"name":"De camino a la oficina (para llevar)","value":2}
+  ]
 }

@@ -1,9 +1,15 @@
 {
-  "id":"2_2_2",
-  "section":"morning",
-  "question":"En un  bar",
-  "type":"group",
-  "groups":[
-    ["cafe", "té", "azucar de sobre", "azucar a granel", "tostada o bollería"]
+  "id": "2_2_2",
+  "section": "morning",
+  "question": "En un  bar",
+  "type": "group",
+  "groups": [
+    [
+      { "name": "cafe", "value": 0 },
+      { "name": "té", "value": 0 },
+      { "name": "azucar de sobre", "value": 0 },
+      { "name": "azucar a granel", "value": 0 },
+      { "name": "tostada o bollería", "value": 0 }
+    ]
   ]
 }

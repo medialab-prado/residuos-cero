@@ -1,7 +1,11 @@
 {
-  "id":"4_1",
-  "section":"afternoon",
-  "question":"De vuelta a casa del trabajo es el momento de hacer la compra ¿qué tipo de productos sueles comprar?",
-  "type":"slider-group",
-  "values":["Productos a granel o envasados","Productos procesado o frescos"]
+  "id": "4_1",
+  "section": "afternoon",
+  "question":
+    "De vuelta a casa del trabajo es el momento de hacer la compra ¿qué tipo de productos sueles comprar?",
+  "type": "slider-group",
+  "values": [
+    { "name": "Productos a granel o envasados", "value": 0 },
+    { "name": "Productos procesado o frescos", "value": 0 }
+  ]
 }

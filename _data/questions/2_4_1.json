@@ -1,10 +1,20 @@
 {
-  "id":"2_4_1",
-  "section":"morning",
-  "question":"¿Qué consumes de tentempié?",
-  "type":"group",
-  "groups":[
-    ["Fruta", "snack casero", "snack de máquina"],
-    ["Café vaso desechable/taza" , "Café molido/cápsula", "Té vaso", "Té desechable/taza" , "Té bolsa/granel"]
+  "id": "2_4_1",
+  "section": "morning",
+  "question": "¿Qué consumes de tentempié?",
+  "type": "group",
+  "groups": [
+    [
+      { "name": "Fruta", "value": 0 },
+      { "name": "snack casero", "value": 0 },
+      { "name": "snack de máquina", "value": 0 }
+    ],
+    [
+      { "name": "Café vaso desechable/taza", "value": 0 },
+      { "name": "Café molido/cápsula", "value": 0 },
+      { "name": "Té vaso", "value": 0 },
+      { "name": "Té desechable/taza", "value": 0 },
+      { "name": "Té bolsa/granel", "value": 0 }
+    ]
   ]
 }

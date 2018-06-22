@@ -1,9 +1,17 @@
 {
-  "id":"2_2_3",
-  "section":"morning",
-  "question":"Para llevar",
-  "type":"group",
-  "groups":[
-    ["cafe o té", "botella de agua", "azucar de sobre (+mezclador)"," bollería (+bolsa)", "bocadillo(+papel de plata)"]
+  "id": "2_2_3",
+  "section": "morning",
+  "question": "Para llevar",
+  "type": "group",
+  "groups": [
+    [
+      { "name": "cafe o té", "value": 0 },
+      { "name": "botella de agua", "value": 0 },
+      { "name": "azucar de sobre (+mezclador)", "value": 0 }
+    ],
+    [
+      { "name": "bollería (+bolsa)", "value": 0 },
+      { "name": "bocadillo(+papel de plata)", "value": 0 }
+    ]
   ]
 }

@@ -3,5 +3,9 @@
   "section":"afternoon",
   "question":"¿Dónde sueles ir?",
   "type":"radio",
-  "values":["Supermercado","Tienda de barrio","Mercado tradicional"]
+  "values":[
+    {"name":"Supermercado","value":3},
+    {"name":"Tienda de barrio","value":2},
+    {"name":"Mercado tradicional","value":1}
+  ]
 }

@@ -3,5 +3,10 @@
   "section":"night",
   "question":"Lo acompañas con",
   "type":"radio",
-  "values":["Botellín","Lata","Vino","Agua"]
+  "values":[
+    {"name":"Botellín","value":0},
+    {"name":"Lata","value":0},
+    {"name":"Vino","value":0},
+    {"name":"Agua","value":0}
+  ]
 }

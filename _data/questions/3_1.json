@@ -1,7 +1,11 @@
 {
-  "id":"3_1",
-  "section":"midday",
-  "question":"Llega la hora de comer y ¿qué sueles hacer?",
-  "type":"radio-number",
-  "values":["llevo mi tupper/como en casa","como fuera ","pido comida a domicilio "]
+  "id": "3_1",
+  "section": "midday",
+  "question": "Llega la hora de comer y ¿qué sueles hacer?",
+  "type": "radio-number",
+  "values": [
+    { "name": "llevo mi tupper/como en casa", "value": 0 },
+    { "name": "como fuera", "value": 0 },
+    { "name": "pido comida a domicilio", "value": 0 }
+  ]
 }

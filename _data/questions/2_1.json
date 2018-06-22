@@ -1,15 +1,62 @@
 {
-  "id":"2_1",
-  "section":"morning",
-  "question":"Por la mañana cuando te levantas, en tu momento de aseo personal ¿qué productos sueles utilizar?",
-  "type":"group",
-  "groups":[
-    ["champú", "gel", "acondicionador"],
-    ["compresas", "tampones", "copa"],
-    ["papel higiénico", "toallitas"],
-    ["maquillaje", "cremas", "perfume", "crema"],
-    ["maquinilla de afeitar desechable" , "maquinilla de afeitar eléctrica", "maquinilla de afeitar acero"],
-    ["cepillo de dientes plástico" , "cepillo de dientes bambú" , "cepillo de dientes eléctrico"],
-    ["desodorante spray" , "desodorante roll on" , "desodorante piedra de alumbre"]
-   ]
+  "id": "2_1",
+  "section": "morning",
+  "question":
+    "Por la mañana cuando te levantas, en tu momento de aseo personal ¿qué productos sueles utilizar?",
+  "type": "group",
+  "groups": [
+    [
+      {
+        "name": "champú",
+        "children": [
+          { "name": "en botella", "value": 0 },
+          { "name": "rellenable", "value": 1 }
+        ]
+      },
+      {
+        "name": "acondicionador",
+        "children": [
+          { "name": "en botella", "value": 0 },
+          { "name": "rellenable", "value": 1 }
+        ]
+      },
+      {
+        "name": "gel",
+        "children": [
+          { "name": "pastilla", "value": 0 },
+          { "name": "botella", "value": 1 }
+        ]
+      }
+    ],
+    [
+      { "name": "compresas", "value": 2 },
+      { "name": "tampones", "value": 2 },
+      { "name": "copa", "value": 0 }
+    ],
+    [
+      { "name": "papel higiénico", "value": 0 },
+      { "name": "toallitas", "value": 0 }
+    ],
+    [
+      { "name": "maquillaje", "value": 0 },
+      { "name": "cremas", "value": 0 },
+      { "name": "perfume", "value": 0 },
+      { "name": "crema", "value": 0 }
+    ],
+    [
+      { "name": "maquinilla de afeitar desechable", "value": 0 },
+      { "name": "maquinilla de afeitar eléctrica", "value": 0 },
+      { "name": "maquinilla de afeitar acero", "value": 0 }
+    ],
+    [
+      { "name": "cepillo de dientes plástico", "value": 0 },
+      { "name": "cepillo de dientes bambú", "value": 0 },
+      { "name": "cepillo de dientes eléctrico", "value": 0 }
+    ],
+    [
+      { "name": "desodorante spray", "value": 0 },
+      { "name": "desodorante roll on", "value": 0 },
+      { "name": "desodorante piedra de alumbre", "value": 0 }
+    ]
+  ]
 }

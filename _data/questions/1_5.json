@@ -3,5 +3,9 @@
   "section":"basic",
   "question":"En casa, ¿qué tipo de agua consumes?",
   "type":"radio",
-  "values":["Del grifo","Embotellada","Fuente de agua"]
+  "values":[
+    {"name":"Del grifo","value":0,"icon":""},
+    {"name":"Embotellada","value":2,"icon":""},
+    {"name":"Fuente de agua","value":3,"icon":""}
+  ]
 }

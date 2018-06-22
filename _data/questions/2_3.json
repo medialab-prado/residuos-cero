@@ -3,6 +3,8 @@
   "section":"morning",
   "question":"Durante el desayuno lees el periódico",
   "type":"radio",
-  "values":["En papel","En el móvil"],
-  "empty_option":true
+  "values":[
+    {"name":"En papel","value":3},
+    {"name":"En el móvil","value":0}
+  ]
 }
