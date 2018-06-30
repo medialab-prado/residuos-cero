@@ -15,8 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: ¿Bolsa? No, gracias.
 email: flora@fosset.co
-description: >- # this means to ignore newlines until "baseurl:"
-En la ciudad de Madrid, cada habitante genera un kilo de basura por día. ¿Cuánto crees que gastas en comparación con la media?
+description: "En la ciudad de Madrid, cada habitante genera un kilo de basura por día. ¿Cuánto crees que gastas en comparación con la media?"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
