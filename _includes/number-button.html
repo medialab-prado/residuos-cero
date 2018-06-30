@@ -1,0 +1,5 @@
+<div>
+{% for i in (question.options.min..question.options.max)%}
+  <input class="answer btn btn-outline-danger" type='button' data-id='{{question_id}}' data-value="{{i}}" data-next="{{next_question}}" name='{{question_id}}' value='{{i}}'>
+{% endfor %}
+</div>
