@@ -1,26 +1,87 @@
-<div class="question row justify-content-md-center align-items-center">
-  <div class='col-md-auto'>
-    {% if question.icon %}
-       <img src="{{question.icon}}" class="img-thumbnail mx-auto d-block" alt="{{question.question}}" />
-    {%else%}
-       <img data-src="holder.js/200x200" class="img-thumbnail mx-auto d-block" alt="{{question.question}}" />
-    {%endif%}
-    <label class="question-label">{{question.question}}</label>
-    {% case question.type %}
-     {% when 'radio' %}
-       {% include radio.html %}
-     {% when 'number' %}
-       {% include number.html %}
-     {% when 'detail-radio' %}
-       {% include radio-detail.html %}
-     {% when 'group' %}
-       {% include group.html %}
-     {% when 'radio-number' %}
-       {% include radio-number.html %}
-     {% when 'slider-group' %}
-       {% include number-group.html %}
-     {% else %}
-       <b>{{question.type}}</b>
-    {% endcase %}
-  </div>
-</div>
+{% if question.type == 'group' %}
+  {% for group in question.groups %}
+  {% assign answer_id = question_id | append:"_" | append: forloop.index %}
+  {% assign width = 12 | divided_by: group.size %}
+  <section id="{{answer_id}}" class="container" data-section="{{section}}" data-prev="{{question.prev}}" data-next="{{question.next}}">
+      <div class="question row justify-content-md-center align-items-center">
+        <div class='col-md-12'>
+          {% if question.icon %}
+             <img src="{{question.icon}}" class="img-thumbnail mx-auto d-block" alt="{{question.question}}" />
+          {%endif%}
+          <label class="question-label">{{question.question}}</label>
+          <div class='row'>
+            {% assign id = 0 %}
+            {% for value in group %}
+            {% assign id = id | plus: 1 %}
+            {% assign detail_id = answer_id | append: "_" | append: id %}
+            {% assign detail = 'false' %}
+            {% if value.children %}
+              {% assign detail ='true' %}
+            {% endif %}
+
+            <div class="col-md-{{width}}">
+              <input class="answer btn btn-outline-danger col" type="button" id="{{answer_id}}" data-id="{{answer_id}}" data-value="{{value.value}}" data-redirect="false" data-target="{{group_next}}" data-detail="{{detail}}" data-detail-target="#{{detail_id}}_detail" value="{{value.name|capitalize}}">
+              {{ if value.children }}
+                <div id="{{detail_id}}_detail" class="list-group" style="display:none">
+                  {% for option in value.children %}
+                    <input class="answer list-group-item list-group-item-secondary btn btn-outline-danger" type="button" data-id="{{answer_id}}" data-value="{{option.value}}" data-redirect="false" data-next="{{group_next}}" value="{{option.name}}">
+                  {% endfor %}
+                </div>
+              {{ endif }}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="container">
+          <div class="row question-control">
+            <div class='col'>
+              <input class="question-action btn btn-outline-danger" id="{{answer_id}}_prev" type="button" value="Anterior" data-target="{{prev_question}}" data-group-size="{{question.groups.size}}">
+            </div>
+            <div class='col'>
+              <input class="question-action btn btn-outline-danger" id="{{answer_id}}_next" type="button" value="Siguiente" data-target="{{next_question}}" data-group-size="{{question.groups.size}}">
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  {% endfor %}
+{% else %}
+<section id="{{question_id}}" class="container" data-section="{{section}}" data-prev="{{question.prev}}" data-next="{{question.next}}">
+    <div class="question row justify-content-md-center align-items-center">
+      <div class='col-md-12'>
+        {% if question.icon %}
+           <img src="{{question.icon}}" class="img-thumbnail mx-auto d-block" alt="{{question.question}}" />
+        {%endif%}
+        <label class="question-label">{{question.question}}</label>
+        <p>{{question.description}}</p>
+        {% case question.type %}
+         {% when 'radio' %}
+           {% include radio.html %}
+         {% when 'group' %}
+           {% include group.html %}
+         {% when 'number-button' %}
+           {% include number-button.html %}
+         {% when 'radio-detail' %}
+           {% include radio-detail.html %}
+         {% when 'radio-number' %}
+           {% include radio-number.html %}
+         {% when 'number-group' %}
+           {% include number-group.html %}
+         {% else %}
+           <b>{{question.type}}</b>
+        {% endcase %}
+      </div>
+      <div class="container">
+        <div class="row question-control">
+          <div class='col'>
+            <input class="question-action btn btn-outline-danger" id="{{question_id}}_prev" type="button" value="Anterior" data-target="{{prev_question}}">
+          </div>
+          <div class='col'>
+            <input class="question-action btn btn-outline-danger" id="{{question_id}}_next" type="button" value="Siguiente" data-target="{{next_question}}" disabled>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<!-- end question -->
+{% endif %}

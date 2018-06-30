@@ -5,24 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>{% if page.title %}{{ page.title | capitalize }} | {% endif %}{{ site.title }}</title>
-  <link rel="stylesheet" href="node_modules/bootstrap/dist//css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="node_modules/bootstrap/dist//css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
   {% include header.html %}
-  <main id="main-container" role="main" class="container-fluid">
+  <main id="main-container" class="container">
     <form>
-      <section id="home" class="container main active" data-next='basic'>
+      <section id="1_1" class="container main active">
         <div class="question row justify-content-md-center align-items-center">
           <div class='col-md-10'>
             <h1>{% if page.title %}{{ page.title | capitalize }} | {% endif %}{{ site.title }}</h1>
             <p>En la ciudad de Madrid, cada habitante genera un kilo de basura por día.</p>
             <p>¿Cuánto crees que gastas en comparación con la media?</p>
             <p>
-              <a href="#" class="btn btn-secondary action" data-next='basic' name='1_1' value='more'>Más</a>
-              <a href="#" class="btn btn-secondary action" data-next='basic' name='1_1' value='less'>Menos</a>
+              <button class="answer btn btn-secondary action" data-next='1_2' data-id="1_1" data-value='more'>Más</button>
+              <button class="answer btn btn-secondary action" data-next='1_2' data-id="1_1" data-value='less'>Menos</button>
             </p>
             <div class="col-md">
               <p class="text-muted">Este proyecto no almacena ningún dato sobre los usuarios. Rellenar el cuestionario requiere aproximadamente cinco minutos. Los resultados deben considerarse una estimación.</p>
@@ -31,26 +31,24 @@
           </div>
         </div>
       </section>
-      <section id="basic" class="container" data-next='morning' data-prev='home'>
-        <h1>Información General</h1> {% assign questions = site.data.questions | where:"section","basic" | sort: 'id' %} {% for question in questions %} {% assign question_id = question.id %} {% include question.html %} {% endfor %}
-      </section>
+      {% assign sections = "basic,morning,midday,afternoon,night" | split :","%}
+      {% for section in sections %}
+        {% assign questions = site.data.questions | where:"section",section | sort: 'id' %}
+        {% assign questions_size = questions | size %}
+        {% for question in questions %}
+          {% assign question_id = question.id %}
+          {% assign prev_question = 'home' %}
+          {% if forloop.index0 > 0 %}
+            {% assign index = forloop.index0 | minus: 1 %}
+            {% assign prev_question = questions[index].id %}
+          {% endif %}
+          {% assign next_question = questions[forloop.index].id %}
+          {% include question.html %}
+          {% assign display = "none" %}
+        {% endfor %}
+      {% endfor %}
 
-      <section id="morning" class="container" data-next='midday' data-prev='basic'>
-        <h1>Mañana</h1> {% assign questions = site.data.questions | where:"section","morning" | sort: 'id' %} {% for question in questions %} {% assign question_id = question.id %} {% include question.html %} {% endfor %}
-      </section>
-
-      <section id="midday" class="container" data-next='afternoon' data-prev='morning'>
-        <h1>Medio día</h1> {% assign questions = site.data.questions | where:"section","midday" | sort: 'id' %} {% for question in questions %} {% assign question_id = question.id %} {% include question.html %} {% endfor %}
-      </section>
-
-      <section id="afternoon" class="container" data-next='night' data-prev='midday'>
-        <h1>Tarde</h1> {% assign questions = site.data.questions | where:"section","afternoon" | sort: 'id' %} {% for question in questions %} {% assign question_id = question.id %} {% include question.html %} {% endfor %}
-      </section>
-
-      <section id="night" class="container" data-next='finish' data-prev='afternoon'>
-        <h1>Noche</h1> {% assign questions = site.data.questions | where:"section","night" | sort: 'id' %} {% for question in questions %} {% assign question_id = question.id %} {% include question.html %} {% endfor %}
-      </section>
-      <section id="finish" class="container">
+      <section id="finish" class="container-fluid">
         <div class="question row justify-content-md-center align-items-center">
           <div class='col-md-auto'>
             <p>Tras un duro día llega el momento de dormir y de conocer la cantidad de residuos que has producido a lo largo del día</p>

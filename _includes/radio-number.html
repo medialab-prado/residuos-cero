@@ -1,22 +1,14 @@
  {%for value in question.values %}
-<div class="d-flex flex-column">
-  <div class="from-group form-check">
-    <input class="form-check-input" type="radio" name="{{question_id}}" value="{{value|downcase}}" id="{{question_id}}_{{value|downcase}}">
-    <label class="form-check-label" for="more">{{value}}</label>
-  </div>
-  <div class="radio-detail clear">
-    <div class="form-group">
-      <label class="form-label" for="{{question_id}}_quantity">Cuántos</label>
-      <input class="form-control custom-range" type="range" name="{{question_id}}_quantity" id="{{question_id}}_quantity" min="{{question.options.min}}" max="{{question.options.max}}">
+ {% assign answer_id = question_id | append: "_" | append: forloop.index %}
+ <div class="row" style="padding-bottom:1em">
+  <div class="col">
+    <label>{{value.name}}</label>
+    <div>
+      <input class="rating" data-max="5" data-min="1" id="some_id" name="your_awesome_parameter" type="number" />
+    {% for i in (question.options.min..question.options.max)%}
+      <!--input class="answer star" type='button' data-id='{{answer_id}}' data-value="{{i}}" data-next="{{next_question}}" name='{{question_id}}' value='{{i}}' data-redirect='false'-->
+    {% endfor %}
     </div>
   </div>
 </div>
 {%endfor%}
-{% if question.empty_option %}
-<div class="d-flex flex-column">
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="{{question_id}}" value="no" id="{{question_id}}_no">
-    <label class="form-check-label" for="{{question_id}}_no">No</label>
-  </div>
-</div>
-{% endif %}

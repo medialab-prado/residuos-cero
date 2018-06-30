@@ -1,12 +1,32 @@
-<div class="row justify-content-md-center">
+  {% assign id = 0 %}
   {% for group in question.groups %}
-  <div class="question-group d-flex flex-column">
-  {%for value in group %}
-    <div class="form-group form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" name="{{question_id}}" value="{{value|downcase}}" id="{{question_id}}_{{value|downcase}}">
-      <label class="form-check-label" for="{{question_id}}_{{value|downcase}}">{{value}}</label>
+    {% assign group_id = question_id | append:"_" | append: forloop.index %}
+    {% assign group_next = question_id | append:"_" | append: forloop.index + 1 | append: '-group'%}
+    <div id="{{group_id}}" class="row justify-content-md-center question-group">
+    {%for value in group %}
+      {% assign id = id | plus: 1 %}
+      {% assign answer_id = question_id | append: "_" | append: id %}
+      {% assign detail = 'false' %}
+      {% if value.children %}
+        {% assign detail ='true' %}
+      {% endif %}
+      <div class="col">
+        <figure class='figure answer' data-id="{{answer_id}}" data-value="{{value.value}}" data-target="{{group_next}}" data-detail="{{detail}}" data-detail-target="#{{answer_id}}_detail">
+        {% if value.icon %}
+           <img src="{{value.icon}}" class="img-thumbnail mx-auto d-block" alt="{{value.name}}" />
+        {%else%}
+           <img data-src="holder.js/100x100" class="img-thumbnail mx-auto d-block" alt="{{value.name}}" />
+        {%endif%}
+        <figcaption class='figure-caption'>{{value.name | capitalize}}</figcaption>
+      </figure>
+      {{ if value.children }}
+        <div id="{{answer_id}}_detail" class="list-group" style="display:none">
+          {% for option in value.children %}
+            <input class="answer list-group-item list-group-item-secondary" type="button" data-id="{{answer_id}}" data-value="{{option.value}}" data-redirect="false" data-next="{{group_next}}" value="{{option.name}}">
+          {% endfor %}
+        </div>
+      {{ endif }}
+      </div>
+    {%endfor%}
     </div>
-  {%endfor%}
-  </div>
   {% endfor %}
-</div>

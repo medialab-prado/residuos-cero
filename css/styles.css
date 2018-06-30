@@ -10,20 +10,35 @@ section{
 section.active{
   display: block;
 }
-#basic{
+.form-control[type=number]{
+  padding:0;
+}
+.question{
+  padding: 1em;
+}
+.question-group{
+  display:none;
+}
+.question-control{
+  margin: 1em;
+}
+.question div{
+  border: 1px solid;
+}
+#basic {
 
 }
-#morning,.morning{
-  background: #F6D285;
+.morning{
+  background-image: linear-gradient(65deg, #fbf4e4, #f1cf84);
 }
-#midday,.midday{
-  background: #FCE043;
+.midday{
+  background-image: linear-gradient(65deg, #eaf1f3, #98c4d1);
 }
-#afternoon,.afternoon{
-  background: #537895;
+.afternoon{
+  background-image: linear-gradient(65deg, #e2c498, #c36b19);
 }
-#night,.night{
-  background: #09203F;
+.night{
+  background-image: linear-gradient(65deg, #6680a6, #192e4e);
 }
 footer {
   position: fixed;

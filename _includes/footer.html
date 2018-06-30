@@ -15,12 +15,13 @@
       </div>
       <div class="questionary">
         <ul class="question-bar navbar-nav mr-auto">
-          {% assign sections = "Preguntas básicas, Mañana, Medio día, Tarde, Noche" | split: ", " %}
-          {% assign sections_ids = "basic, morning, midday, afternoon, night" | split: ", " %}
-        {% for section in sections %}
+          {% assign section_names = "Preguntas básicas,Mañana,Medio día,Tarde,Noche" | split: "," %}
+          {% assign sections = "basic,morning,midday,afternoon,night" | split: "," %}
+          {% assign sections_ids = "1_2, 2_1_1, 3_1, 4_1, 5_1" | split: ", " %}
+        {% for section in section_names %}
           <li class="nav-item">
-            <a href="#" class="action-footer" data-target="#{{sections_ids[forloop.index0]}}">{{section|capitalize}}</a>
-            {% assign questions = site.data.questions | where:"section",sections_ids[forloop.index0] | sort: 'id' %}
+            <a href="#" class="action-footer" data-target="{{sections_ids[forloop.index0]}}">{{section|capitalize}}</a>
+            {% assign questions = site.data.questions | where:"section",sections[forloop.index0] | sort: 'id' %}
             <ul class="question_index">
               {% for question in questions %}
                 <li id="{{question.id}}"><a href="#{{question_index}}">*</a></li>
