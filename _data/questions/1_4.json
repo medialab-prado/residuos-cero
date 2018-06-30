@@ -1,10 +1,11 @@
 {
   "id":"1_4",
   "section":"basic",
-  "question":"¿Sueles usar botellas de agua reusables?",
+  "question":"¿Bebes agua embotellada?",
   "type":"radio",
   "values":[
-    {"name":"Si","value":0},
-    {"name":"No","value":1}
+    {"name":"Siempre","value":0},
+    {"name":"A veces","value":2},
+    {"name":"Nunca","value":3}
   ]
 }

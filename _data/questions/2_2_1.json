@@ -3,21 +3,30 @@
   "section": "morning",
   "question": "En casa",
   "type": "group",
+  "prev": "2_2",
+  "next": "2_3",
   "groups": [
     [
-      { "name": "Cereales granel", "value": 0 },
-      { "name": "Cereales envasado", "value": 0 },
-      { "name": "yogurt", "value": 0 },
-      { "name": "fruta", "value": 0 },
-      { "name": "pan", "value": 0 },
-      { "name": "mermelada o miel o nocilla", "value": 0 }
+      {"name": "Cereales granel","value": 0},
+      {"name": "Cereales envasado","value": 0},
+      {"name": "yogurt","value": 0}
     ],
-    [{ "name": "mantequilla", "value": 0 }, { "name": "aceite", "value": 0 }],
     [
-      { "name": "Café molido", "value": 0 },
-      { "name": "Café capsulas", "value": 0 },
-      { "name": "té granel", "value": 0 },
-      { "name": "té granel bolsitas", "value": 0 }
+      {"name": "fruta","value": 0},
+      {"name": "pan","value": 0},
+      {"name": "mermelada o miel o nocilla","value": 0}
+    ],
+    [
+      {"name": "mantequilla","value": 0},
+      {"name": "aceite","value": 0}
+    ],
+    [
+      {"name": "Café molido","value": 0},
+      {"name": "Café capsulas","value": 0}
+    ],
+    [
+      {"name": "té granel","value": 0},
+      {"name": "té granel bolsitas","value": 0}
     ]
   ]
 }

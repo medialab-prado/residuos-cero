@@ -2,7 +2,7 @@
   "id":"5_4",
   "section":"night",
   "question":"Llegas a casa, te pones cómodo, eliges  tu serie favorita y…",
-  "type":"slider-group",
+  "type":"number-group",
   "values": [
     { "name": "Te preparas la cena", "value": 0 },
     { "name": "pides comida a domicilio", "value": 0 },

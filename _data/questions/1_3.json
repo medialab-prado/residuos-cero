@@ -1,11 +1,11 @@
 {
   "id":"1_3",
   "section":"basic",
-  "question":"¿Fumas?",
-  "type":"detail-radio",
+  "question":"¿Compras productos reutilizables?",
+  "type":"radio",
   "values":[
-    {"name":"Industriales","value":2},
-    {"name":"Tabaco de liar","value":1},
-    {"name":"No fumo","value":0}
+    {"name":"Siempre","value":0},
+    {"name":"A veces","value":1},
+    {"name":"Nunca","value":2}
   ]
 }

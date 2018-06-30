@@ -3,6 +3,7 @@
   "section": "midday",
   "question": "¿Qué consumes de tentempié?",
   "type": "group",
+  "prev": "3_1",
   "groups": [
     [
       { "name": "Fruta", "value": 0 },
@@ -11,7 +12,9 @@
     ],
     [
       { "name": "Café vaso desechable/taza", "value": 0 },
-      { "name": "Café molido/cápsula", "value": 0 },
+      { "name": "Café molido/cápsula", "value": 0 }
+    ],
+    [
       { "name": "Té vaso", "value": 0 },
       { "name": "Té desechable/taza", "value": 0 },
       { "name": "Té bolsa/granel", "value": 0 }

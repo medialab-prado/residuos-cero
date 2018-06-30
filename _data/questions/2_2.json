@@ -4,8 +4,8 @@
   "question":"ahora que ya estás listo para empezar el día, ¿como son tus desayunos?",
   "type":"radio",
   "values":[
-    {"name":"En casa","value":0},
-    {"name":"En un bar","value":1},
-    {"name":"De camino a la oficina (para llevar)","value":2}
+    {"name":"En casa","value":0,"next":"2_2_1_1"},
+    {"name":"En un bar","value":1,"next":"2_2_2_1"},
+    {"name":"De camino a la oficina (para llevar)","value":2,"next":"2_2_3_1"}
   ]
 }

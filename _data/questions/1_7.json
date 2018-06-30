@@ -1,11 +1,10 @@
 {
   "id":"1_7",
   "section":"basic",
-  "question":"¿Sueles comprar a granel?",
-  "type":"radio",
+  "question":"¿Fumas?",
+  "type":"radio-detail",
   "values":[
-    {"name":"Siempre","value":0},
-    {"name":"A veces","value":1},
-    {"name":"Nunca","value":2}
+    {"name":"Si","value":2},
+    {"name":"No","value":1}
   ]
 }

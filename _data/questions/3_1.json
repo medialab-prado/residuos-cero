@@ -1,11 +1,14 @@
 {
   "id": "3_1",
   "section": "midday",
-  "question": "Llega la hora de comer y ¿qué sueles hacer?",
-  "type": "radio-number",
+  "question": "Llega la hora de comer y ¿qué sueles hacer? {cambiar}",
+  "description" : "Elige para los siete dias de la semana",
+  "type": "radio-detail",
+  "prev" : "2_4",
   "values": [
-    { "name": "llevo mi tupper/como en casa", "value": 0 },
-    { "name": "como fuera", "value": 0 },
-    { "name": "pido comida a domicilio", "value": 0 }
-  ]
+    { "name": "llevo mi tupper/como en casa", "value": 1 },
+    { "name": "como fuera", "value": 2 },
+    { "name": "pido comida a domicilio", "value": 3 }
+  ],
+  "options":{"min":1,"max":7}
 }
